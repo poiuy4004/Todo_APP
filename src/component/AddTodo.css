@@ -1,0 +1,25 @@
+aside{
+  display: flex;
+  margin: -45px 0;
+}
+.addContainer{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.addContainer:hover{
+  box-shadow: 0px 0px 0px 5px #A0A0A0, 3px 3px 10px 10px rgba(0,0,0,0.5);
+}
+.addContainer:active{
+  box-shadow: 0px 0px 0px 5px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 10px 10px rgba(0,0,0,0);
+}
+span{
+  margin: 10px;
+}
+.fa-plus{
+  color: red;
+  font-size: 70px;
+}
+.add{
+  color: gray;
+}
