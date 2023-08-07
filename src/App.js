@@ -7,7 +7,6 @@ import { useState } from "react";
 
 function App() {
   const [day, setDay] = useState(new Intl.DateTimeFormat('en-GB',{weekday: 'short', day: 'numeric', month: 'short'}).format(new Date()))
-  console.log(day)
   const [todoModal, setTodoModal] = useState(false)
   const todoModalHandler = () => {
     setTodoModal(!todoModal)
