@@ -10,4 +10,5 @@ jobs:
     steps:
       - name: Install dependencies
         run: npm install
-        working-directory: ./
+      - name: Start
+        run: npm start
