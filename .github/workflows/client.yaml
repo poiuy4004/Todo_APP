@@ -5,8 +5,12 @@ on: [push, pull_request]
 
 # 어떤 job을 할지
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-20.04
     steps:
-      - run: npm install
-      - run: npm test
+      - name: Checkout source code.
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
