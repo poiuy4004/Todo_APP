@@ -9,7 +9,11 @@ export default function DayModal({dayModalHandler, day, setDay}){
         <section className="modalBackground" onClick={dayModalHandler} >
           <div className="dayModalBox" onClick={e=>e.stopPropagation()}>
             <div className="formBox">SELECT DATE</div>
-            <form onSubmit={setDay(inputWeekday+', '+inputDay+' '+inputMonth)}>
+            <form onSubmit={e=>{
+              e.preventDefault()
+              setDay(inputWeekday+', '+inputDay+' '+inputMonth)
+              dayModalHandler()
+            }}>
               <div className="input">
                 <label>weekday</label>
                 <select required onChange={e=>setInputWeekday(e.target.value)}>
